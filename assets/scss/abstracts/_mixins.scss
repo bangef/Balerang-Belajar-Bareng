@@ -1,0 +1,23 @@
+@mixin container($p: null, $jc: null, $fd: row, $ai: null) {
+	padding: $p;
+	max-width: 1400px;
+	display: flex;
+	justify-content: $jc;
+	margin: 0 auto;
+	flex-direction: $fd;
+	$align-items: $ai;
+}
+
+@mixin fonts(
+	$font-weight: null,
+	$font-size: null,
+	$text-align: null,
+	$line-height: null,
+	$color: white
+) {
+	font-weight: $font-weight;
+	font-size: $font-size;
+	line-height: $line-height;
+	text-align: $text-align;
+	color: $color;
+}

@@ -1,0 +1,111 @@
+@import "../base/variable";
+@import "../abstracts/mixins";
+
+.testimonial {
+	background: map-get($bg-color, secondary);
+
+	&__title {
+		@include fonts(
+			map-get($font-weight, bol),
+			map-get($font-size, h4),
+			center,
+			-2%
+		);
+		@media screen and(min-width: map-get($res, md)) {
+			font-size: map-get($font-size, h3);
+		}
+
+		@media screen and(min-width: map-get($res, lg)) {
+			font-size: map-get($font-size, h2);
+		}
+	}
+
+	&__center {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__wrapper {
+		margin-top: 30px;
+
+		& > .swiper > .swiper-pagination {
+			margin-top: 100px;
+		}
+	}
+
+	&__card {
+		padding: 20px;
+		border-radius: 10px;
+		background: #ffffff;
+		box-shadow: 15px 10px 50px rgba(0, 0, 0, 0.1);
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+		width: 288px;
+		max-height: 700px;
+		height: 100%;
+		@media screen and (min-width: map-get($res, lg)) {
+			height: 500px;
+		}
+
+		&__top {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding: 0px 0px 40px;
+			gap: 32px;
+			height: 50%;
+			border-bottom: 1px solid #212529;
+
+			& > img {
+				width: 56px;
+				height: 40.02px;
+			}
+
+			& > p {
+				font-size: 16px;
+				line-height: 20px;
+				letter-spacing: -2%;
+			}
+		}
+
+		&__bottom {
+			height: 50%;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			align-items: flex-start;
+			padding: 0px;
+			gap: 24px;
+
+			& > img {
+				border-radius: 50%;
+				width: 65px;
+				height: 65px;
+			}
+
+			& > h1 {
+				font-weight: 700;
+				font-size: 1rem;
+				letter-spacing: -2%;
+			}
+
+			& > p {
+				letter-spacing: -2%;
+				line-height: 30px;
+			}
+		}
+	}
+
+	&__mt {
+		margin-top: 30px;
+	}
+	.container {
+		@include container(80px 16px, space-between, column, center);
+
+		@media screen and(min-width: map-get($res, md)) {
+			padding: 100px 20px;
+		}
+	}
+}

@@ -1,0 +1,78 @@
+@import "../abstracts/mixins";
+@import "../base/variable";
+
+.ourservices {
+	width: 100%;
+	background-color: map-get($bg-color, light);
+	color: map-get($text-color, dark);
+
+	&__title {
+		@include fonts(
+			map-get($font-weight, bol),
+			map-get($font-size, h4),
+			center,
+			-2%,
+			map-get($text-color, dark)
+		);
+
+		@media screen and(min-width: map-get($res, md)) {
+			font-size: map-get($font-size, h3);
+		}
+		@media screen and(min-width: map-get($res, lg)) {
+			font-size: map-get($font-size, h2);
+		}
+	}
+	.flip-vertical {
+		flex-direction: row-reverse;
+	}
+	&__wrapper {
+		padding-left: 2rem;
+		margin-top: 30px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		@media screen and(min-width: map-get($res, md)) {
+			padding-left: 1rem;
+			flex-direction: row;
+		}
+
+		&__section {
+			margin-top: 24px;
+			@media screen and(min-width: map-get($res, md)) {
+				margin-top: 0;
+				width: 50%;
+				padding-right: 2rem;
+				display: flex;
+				justify-content: center;
+			}
+			&__services {
+				list-style-image: url("../image/os-checklist.png");
+				color: map-get($text-color, dark);
+				&__title {
+					line-height: 30px;
+					font-size: map-get($font-size, h5);
+					font-weight: map-get($font-weight, smalbol);
+				}
+				ul {
+					list-style-image: none;
+					list-style-type: disc;
+					margin-top: 0.8rem;
+					padding-left: 1rem;
+					line-height: 30px;
+					color: map-get($text-color, dark);
+					li {
+						line-height: 1.5rem;
+						font-size: 0.8rem;
+					}
+				}
+			}
+		}
+	}
+
+	.container {
+		@include container(80px 16px, space-between, column, center);
+		@media screen and(min-width: map-get($res, md)) {
+			padding: 100px 20px;
+		}
+	}
+}

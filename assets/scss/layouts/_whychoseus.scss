@@ -1,0 +1,136 @@
+@import "../abstracts/mixins";
+@import "../base/variable";
+
+.whychoseus {
+	width: 100%;
+	background: map-get($bg-color, secondary) url("../image/hero-bg-element.svg")
+		no-repeat;
+	background-position: 20% 0%;
+	background-size: auto;
+	position: relative;
+	z-index: 2;
+
+	&__left {
+		&__title {
+			@include fonts(
+				map-get($font-weight, bol),
+				map-get($font-size, h4),
+				center,
+				-2%
+			);
+
+			@media screen and(min-width: map-get($res, md)) {
+				font-size: map-get($font-size, h3);
+			}
+			@media screen and(min-width: map-get($res, lg)) {
+				font-size: map-get($font-size, h2);
+			}
+		}
+	}
+
+	&__right {
+		margin-top: 30px;
+		&__slider {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			gap: 24px;
+			@media screen and (min-width: map-get($res, md)) {
+				justify-content: space-around;
+				flex-direction: row;
+				flex-wrap: wrap;
+			}
+			&__item {
+				border-radius: 1rem;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				flex-wrap: wrap;
+				width: 80%;
+				max-height: 400px;
+				height: 100%;
+				background: map-get($bg-color, light);
+				padding: 1rem;
+				border: 5px solid map-get($map: $text-color, $key: light);
+				text-align: center;
+				@media screen and (min-width: map-get($res, md)) {
+					width: 45%;
+				}
+				@media screen and (min-width: map-get($res, lg)) {
+					width: 30%;
+					height: 300px;
+				}
+				&__image {
+					width: 50px;
+				}
+				&__title {
+					margin-top: 24px;
+					color: map-get($text-color, light);
+					text-align: center;
+					font-size: map-get($map: $font-size, $key: h5);
+					font-weight: map-get($map: $font-weight, $key: bol);
+				}
+
+				&__describe {
+					margin-top: 1rem;
+					color: map-get($text-color, light);
+					text-align: center;
+					line-height: 30px;
+				}
+			}
+
+			&__item:hover {
+				transform: scale(98%) translateX(-20px);
+				transition: all ease 0.3s;
+				box-shadow: 15px 15px 0px 0px map-get($map: $text-color, $key: light);
+			}
+		}
+	}
+
+	.container {
+		@include container(80px 16px, space-between, column, center);
+		@media screen and(min-width: map-get($res, md)) {
+			padding: 100px 20px;
+		}
+	}
+
+	.border-wave-1 {
+		z-index: 1;
+		position: absolute;
+		top: -40px;
+		left: 0;
+		width: 100%;
+		max-width: 50000px;
+		margin-top: 20px;
+		@media screen and (min-width: map-get($res, md)) {
+			top: -70px;
+		}
+		@media screen and (min-width: 1024px) {
+			top: -85px;
+		}
+		@media screen and (min-width: map-get($res, lg)) {
+			top: -120px;
+		}
+	}
+
+	.border-wave-2 {
+		z-index: 1;
+		position: absolute;
+		bottom: -20px;
+		left: 0;
+		width: 100%;
+		max-width: 50000px;
+		margin-top: 20px;
+		transform: rotateX(180deg);
+		@media screen and (min-width: map-get($res, md)) {
+			bottom: -53px;
+		}
+		@media screen and (min-width: 1024px) {
+			bottom: -70px;
+		}
+		@media screen and (min-width: map-get($res, lg)) {
+			bottom: -100px;
+		}
+	}
+}

@@ -1,0 +1,29 @@
+@import "../base/variable";
+
+.to-top {
+	& > a {
+		display: relative;
+		position: fixed;
+		z-index: 3;
+		right: 20px;
+		bottom: 100px;
+		border-radius: 1rem;
+		padding: 0.8rem 1rem;
+		text-decoration: none;
+		display: inline-block;
+		opacity: 0.5;
+		background-color: map-get($bg-color, dark);
+		&:hover {
+			transition: all ease-in 0.3s;
+			opacity: 1;
+		}
+		& > i {
+			font-size: map-get($font-size, h5);
+			color: map-get($text-color, light);
+		}
+
+		@media screen and (min-width: map-get($res, md)) {
+			bottom: 20px;
+		}
+	}
+}

@@ -1,0 +1,78 @@
+@import "../abstracts/mixins";
+@import "../base/variable";
+
+.contactus {
+	background: map-get($bg-color, primary);
+
+	&__title {
+		@include fonts(
+			map-get($font-weight, bol),
+			map-get($font-size, h4),
+			center,
+			-2%,
+			map-get($text-color, dark)
+		);
+		@media screen and(min-width: map-get($res, md)) {
+			font-size: map-get($font-size, h3);
+		}
+	}
+
+	&__wrapper {
+		margin-top: 30px;
+		background-color: map-get($bg-color, secondary);
+		border-radius: 1rem;
+		width: 100%;
+		padding: 2rem;
+		@media screen and(min-width: map-get($res, md)) {
+			width: 100%;
+			max-width: 500px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		& > h1 {
+			font-size: map-get($font-size, h5);
+			font-weight: map-get($font-weight, smalbol);
+			color: map-get($text-color, light);
+			letter-spacing: -2%;
+			line-height: 30px;
+			@media screen and(min-width: map-get($res, md)) {
+				letter-spacing: auto;
+				line-height: 3rem;
+				font-size: map-get($font-size, h3);
+			}
+			@media screen and(min-width: map-get($res, lg)) {
+				letter-spacing: auto;
+				line-height: 4rem;
+				font-size: map-get($font-size, h2);
+			}
+		}
+	}
+
+	&__btn {
+		text-decoration: none;
+		color: map-get($text-color, dark);
+		background-color: map-get($bg-color, primary);
+		padding: 1.5rem 0.75rem;
+		margin-top: 24px;
+		display: inline-block;
+		border-radius: 1rem;
+		font-weight: map-get($font-weight, bol);
+		&:hover {
+			background-color: #dedede;
+			transition: all ease-in-out 0.3s;
+		}
+
+		&:focus {
+			outline: none;
+			box-shadow: 0 0 0 5px lightskyblue;
+		}
+	}
+	.container {
+		@include container(80px 16px, space-between, column, center);
+
+		@media screen and(min-width: map-get($res, md)) {
+			padding: 100px 20px;
+		}
+	}
+}

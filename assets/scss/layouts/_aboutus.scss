@@ -1,0 +1,92 @@
+@import "../abstracts/mixins";
+@import "../base/variable";
+
+.aboutus {
+	background: map-get($bg-color, primary) url("../image/aboutus-bg-element.svg")
+		no-repeat;
+	background-position: -50% 10%;
+	background-size: auto;
+
+	@media screen and (min-width: map-get($res, md)) {
+		background-position: -10% 10%;
+	}
+	@media screen and (min-width: map-get($res, lg)) {
+	}
+	.container {
+		@include container(80px 16px, space-between, column, center);
+
+		@media screen and(min-width: map-get($res, md)) {
+			padding: 100px 20px;
+		}
+		@media screen and(min-width: map-get($res, lg)) {
+			flex-direction: row-reverse;
+		}
+	}
+
+	&__left {
+		flex-basis: 100%;
+		@media screen and(min-width: map-get($res, lg)) {
+			flex-basis: 50%;
+			padding-right: 1rem;
+		}
+		&__title {
+			@include fonts(
+				map-get($font-weight, bol),
+				map-get($font-size, h4),
+				center,
+				-2%,
+				map-get($text-color, dark)
+			);
+
+			@media screen and(min-width: map-get($res, md)) {
+				font-size: map-get($font-size, h3);
+			}
+
+			@media screen and(min-width: map-get($res, lg)) {
+				font-size: map-get($font-size, h2);
+				text-align: start;
+			}
+		}
+
+		&__describe {
+			line-height: 30px;
+			letter-spacing: -2%;
+			margin-top: 24px;
+			text-align: center;
+			font-weight: map-get($map: $font-weight, $key: reg);
+			color: map-get($map: $text-color, $key: dark);
+
+			@media screen and(min-width: map-get($res, md)) {
+				margin-top: 24px;
+			}
+			@media screen and(min-width: map-get($res, lg)) {
+				text-align: start;
+			}
+		}
+	}
+
+	&__right {
+		margin-top: 60px;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		&__image {
+			border-radius: 1rem;
+			width: 100%;
+			@media screen and(min-width: map-get($res, md)) {
+				width: 551px;
+				max-height: 367px;
+			}
+		}
+
+		@media screen and(min-width: map-get($res, md)) {
+			margin-top: 100px;
+		}
+		@media screen and(min-width: map-get($res, lg)) {
+			margin-top: 0;
+			flex-basis: 50%;
+		}
+	}
+}

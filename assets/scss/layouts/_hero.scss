@@ -1,0 +1,87 @@
+@import "../abstracts/mixins";
+@import "../base/variable";
+
+.hero {
+	background: map-get($bg-color, secondary) url("../image/hero-bg-element.svg")
+		no-repeat;
+	background-position: 20% 0%;
+	background-size: auto;
+	color: map-get($text-color, light);
+
+	@media screen and(min-width: map-get($res, lg)) {
+		background-size: 50% 100%;
+		background-position-x: -50px;
+	}
+
+	.container {
+		@include container(80px 16px, space-between, column, center);
+		@media screen and(min-width: map-get($res, md)) {
+			padding: 100px 20px;
+		}
+		@media screen and(min-width: map-get($res, lg)) {
+			flex-direction: row;
+		}
+		.hero__left {
+			@media screen and(min-width: map-get($res, lg)) {
+				width: 50%;
+			}
+			.hero__title {
+				@include fonts(
+					map-get($font-weight, bol),
+					map-get($font-size, h4),
+					center,
+					-2%
+				);
+				@media screen and(min-width: map-get($res, md)) {
+					font-size: map-get($font-size, h3);
+				}
+				@media screen and(min-width: map-get($res, lg)) {
+					font-size: map-get($font-size, h2);
+				}
+			}
+
+			.hero__describe {
+				line-height: 30px;
+				letter-spacing: -2%;
+				margin-top: 60px;
+				text-align: center;
+				font-weight: 400;
+				@media screen and(min-width: map-get($res, md)) {
+					margin-top: 24px;
+				}
+			}
+			@media screen and(min-width: map-get($res, lg)) {
+				flex-basis: 50%;
+				padding-right: 1rem;
+
+				& .hero__title,
+				& .hero__describe {
+					text-align: start;
+				}
+			}
+		}
+
+		.hero__right {
+			margin-top: 60px;
+			width: 100%;
+			display: none;
+			@media screen and(min-width: map-get($res, lg)) {
+				display: flex;
+				width: 50%;
+				justify-content: center;
+				align-items: center;
+			}
+			.hero__image {
+				@media screen and(min-width: map-get($res, lg)) {
+					width: 100%;
+				}
+			}
+			@media screen and(min-width: map-get($res, md)) {
+				margin-top: 100px;
+			}
+			@media screen and(min-width: map-get($res, lg)) {
+				margin-top: 0;
+			}
+		}
+	}
+}

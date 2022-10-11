@@ -1,0 +1,33 @@
+// COLOR
+$bg-color: (
+	primary: #fff,
+	secondary: #043873,
+	dark: #212529,
+);
+
+$text-color: (
+	light: #ffffff,
+	dark: #212529,
+);
+
+// TYPHORAPHY
+$font-family: "Inter", sans-serif;
+$font-weight: (
+	reg: 400,
+	med: 500,
+	smalbol: 600,
+	bol: 700,
+);
+$font-size: (
+	h1: 72px,
+	h2: 64px,
+	h3: 54px,
+	h4: 36px,
+	h5: 28px,
+);
+
+// RESPONSIVITAS
+$res: (
+	md: 768px,
+	lg: 1440px,
+);
