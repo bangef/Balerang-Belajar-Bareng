@@ -1,0 +1,70 @@
+@import "../abstracts/mixins";
+@import "../base/variable";
+
+.biography {
+	background-color: map-get($bg-color, secondary);
+	&__left {
+		width: 100%;
+		text-align: center;
+		@media screen and(min-width: map-get($res, md)) {
+			margin-top: 0;
+			width: 50%;
+		}
+		&__image {
+			max-width: 200px;
+			width: 100%;
+			@media screen and(min-width: map-get($res, md)) {
+				max-width: 300px;
+			}
+		}
+	}
+
+	&__right {
+		width: 100%;
+		margin-top: 30px;
+		@media screen and(min-width: map-get($res, md)) {
+			margin-top: 0;
+			width: 50%;
+		}
+		&__title {
+			@include fonts(
+				map-get($font-weight, bol),
+				map-get($font-size, h4),
+				center,
+				-2%
+			);
+
+			@media screen and(min-width: map-get($res, md)) {
+				font-size: map-get($font-size, h3);
+				text-align: start;
+			}
+
+			@media screen and(min-width: map-get($res, lg)) {
+				font-size: map-get($font-size, h2);
+			}
+		}
+
+		&__describe {
+			line-height: 30px;
+			letter-spacing: -2%;
+			margin-top: 24px;
+			font-weight: map-get($map: $font-weight, $key: reg);
+			color: map-get($map: $text-color, $key: light);
+			@media screen and(min-width: map-get($res, md)) {
+				text-align: start;
+			}
+			@media screen and(min-width: map-get($res, md)) {
+				padding-right: 5rem;
+			}
+		}
+	}
+	.container {
+		@include container(80px 16px, space-between, column, center);
+
+		@media screen and(min-width: map-get($res, md)) {
+			flex-direction: row;
+			align-items: center;
+			padding: 100px 20px;
+		}
+	}
+}

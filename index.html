@@ -5,79 +5,11 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link
-			rel="apple-touch-icon"
-			sizes="57x57"
-			href="./assets/image/favicon/apple-icon-57x57.png"
-		/>
-		<link
-			rel="apple-touch-icon"
-			sizes="60x60"
-			href="./assets/image/favicon/apple-icon-60x60.png"
-		/>
-		<link
-			rel="apple-touch-icon"
-			sizes="72x72"
-			href="./assets/image/favicon/apple-icon-72x72.png"
-		/>
-		<link
-			rel="apple-touch-icon"
-			sizes="76x76"
-			href="./assets/image/favicon/apple-icon-76x76.png"
-		/>
-		<link
-			rel="apple-touch-icon"
-			sizes="114x114"
-			href="./assets/image/favicon/apple-icon-114x114.png"
-		/>
-		<link
-			rel="apple-touch-icon"
-			sizes="120x120"
-			href="./assets/image/favicon/apple-icon-120x120.png"
-		/>
-		<link
-			rel="apple-touch-icon"
-			sizes="144x144"
-			href="./assets/image/favicon/apple-icon-144x144.png"
-		/>
-		<link
-			rel="apple-touch-icon"
-			sizes="152x152"
-			href="./assets/image/favicon/apple-icon-152x152.png"
-		/>
-		<link
-			rel="apple-touch-icon"
-			sizes="180x180"
-			href="./assets/image/favicon/apple-icon-180x180.png"
-		/>
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="192x192"
-			href="./assets/image/favicon/android-icon-192x192.png"
-		/>
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="32x32"
-			href="./assets/image/favicon/favicon-32x32.png"
-		/>
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="96x96"
-			href="./assets/image/favicon/favicon-96x96.png"
-		/>
-		<link
 			rel="icon"
 			type="image/png"
 			sizes="16x16"
 			href="./assets/image/favicon/favicon-16x16.png"
 		/>
-		<link rel="manifest" href="./assets/image/favicon/manifest.json" />
-		<meta name="msapplication-TileColor" content="#ffffff" />
-		<meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
-		<meta name="theme-color" content="#ffffff" />
-
 		<title>Belareng : Belajar Bareng</title>
 		<!-- Library Slider Swiper -->
 		<link
@@ -89,6 +21,8 @@
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
 		/>
+		<!-- Library AOS -->
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
 		<link rel="stylesheet" href="assets/scss/main.css" />
 	</head>
@@ -113,7 +47,7 @@
 		<main>
 			<div class="hero">
 				<article class="container">
-					<section class="hero__left">
+					<section class="hero__left" data-aos="fade-down" data-aos-delay="50">
 						<h1 class="hero__title">
 							Bingung Memulai Dari Mana Membangun E-learning Untuk Sekolah /
 							Perusahaan Anda?
@@ -125,7 +59,7 @@
 							untuk memudahkan proses pembelajaran secara online
 						</p>
 					</section>
-					<section class="hero__right">
+					<section class="hero__right" data-aos="fade-up" data-aos-delay="200">
 						<img
 							class="hero__image"
 							src="./assets/image/hero-1.png"
@@ -136,7 +70,11 @@
 			</div>
 			<div class="aboutus" id="aboutus">
 				<article class="container">
-					<section class="aboutus__left">
+					<section
+						class="aboutus__left"
+						data-aos="fade-down"
+						data-aos-delay="50"
+					>
 						<h1 class="aboutus__left__title">
 							Mengapa Anda harus membuat website e-learning?
 						</h1>
@@ -150,7 +88,11 @@
 							belajar mengajar.
 						</p>
 					</section>
-					<section class="aboutus__right">
+					<section
+						class="aboutus__right"
+						data-aos="fade-up"
+						data-aos-delay="200"
+					>
 						<img
 							class="aboutus__right__image"
 							src="./assets/image/aboutus-1.png"
@@ -170,7 +112,11 @@
 					<path d="M0 96L1440 0V160H0V96Z" fill="#043873" />
 				</svg>
 				<article class="container">
-					<section class="whychoseus__left">
+					<section
+						class="whychoseus__left"
+						data-aos="fade-down"
+						data-aos-delay="50"
+					>
 						<h1 class="whychoseus__left__title">Mengapa harus kami ?</h1>
 					</section>
 					<section class="whychoseus__right">
@@ -191,9 +137,20 @@
 			</div>
 			<div class="ourservices" id="ourservices">
 				<article class="container">
-					<h1 class="ourservices__title">Servis Kami</h1>
+					<h1
+						class="ourservices__title"
+						data-aos="fade-down"
+						data-aos-delay="50"
+					>
+						Servis Kami
+					</h1>
 					<section class="ourservices__wrapper">
-						<section class="ourservices__wrapper__section">
+						<section
+							class="ourservices__wrapper__section"
+							class="whychoseus__left"
+							data-aos="fade-down"
+							data-aos-delay="50"
+						>
 							<ul class="ourservices__wrapper__section__services">
 								<li class="ourservices__wrapper__section__services__title">
 									Spesifikasi E-Learning
@@ -211,7 +168,11 @@
 								</ul>
 							</ul>
 						</section>
-						<section class="ourservices__wrapper__section">
+						<section
+							class="ourservices__wrapper__section"
+							data-aos="fade-down"
+							data-aos-delay="200"
+						>
 							<ul class="ourservices__wrapper__section__services">
 								<li class="ourservices__wrapper__section__services__title">
 									Fitur E Learning
@@ -237,7 +198,13 @@
 			</div>
 			<div class="testimonial" id="testimonial">
 				<article class="container">
-					<h1 class="testimonial__title">Testimonial</h1>
+					<h1
+						class="testimonial__title"
+						data-aos="fade-down"
+						data-aos-delay="50"
+					>
+						Testimonial
+					</h1>
 					<section class="testimonial__wrapper">
 						<!-- Slider main container -->
 						<div class="swiper my-swipper">
@@ -253,16 +220,43 @@
 			</div>
 			<div class="contactus">
 				<div class="container">
-					<h1 class="contactus__title">Kontak Kami</h1>
-					<div class="contactus__wrapper">
+					<h1 class="contactus__title" data-aos="fade-down" data-aos-delay="50">
+						Kontak Kami
+					</h1>
+					<div
+						class="contactus__wrapper"
+						data-aos="fade-up"
+						data-aos-delay="200"
+					>
 						<h1>Tunggu apalagi, silahkan hubungi layanan kami</h1>
 						<a class="contactus__btn" href="#">Hubungi 📞</a>
 					</div>
 				</div>
 			</div>
-			<aside class="to-top">
-				<a href="#top"><i class="fa-solid fa-arrow-up"></i></a>
+			<aside class="biography">
+				<article class="container">
+					<div class="biography__left" data-aos="fade-down" data-aos-delay="50">
+						<img
+							class="biography__left__image"
+							src="./assets/image/bio-img-1.webp"
+							alt="photo of me"
+						/>
+					</div>
+					<div class="biography__right" data-aos="fade-up" data-aos-delay="200">
+						<h1 class="biography__right__title">Biografi</h1>
+						<p class="biography__right__describe">
+							Hallo perkenalkan nama saya Ficri Hanip, tinggal di Depok, Jawa
+							Barat. Saya sangat tertarik di bidang frontend website developer,
+							alasannya karena komunitas yang begitu besar juga seperti ada seni
+							tersendiri gitu 😆. Ini adalah biografi singkat saya, terimakasih
+							✌️
+						</p>
+					</div>
+				</article>
 			</aside>
+			<div class="to-top">
+				<a href="#top"><i class="fa-solid fa-arrow-up"></i></a>
+			</div>
 		</main>
 		<footer class="footer">
 			<div class="container">
@@ -304,6 +298,8 @@
 		</footer>
 		<!-- Library Slider Swiper -->
 		<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+		<!-- Library AOS -->
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 		<script type="module" src="assets/js/script.js"></script>
 	</body>
 </html>

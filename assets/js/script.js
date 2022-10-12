@@ -5,6 +5,7 @@ showUI(data.menuNavbar, "#menu-list", "menu-navbar");
 showUI(data.whychouseus, ".whychoseus__right__slider", "card");
 showUI(data.testimonial, ".swiper-wrapper", "card-testimonial");
 
+// Library Slider
 const swiper = new Swiper(".my-swipper", {
 	slidesPerView: 3,
 	spaceBetween: 30,
@@ -20,4 +21,10 @@ const swiper = new Swiper(".my-swipper", {
 		},
 	},
 	loop: true,
+});
+
+// Library AOS
+AOS.init({
+	duration: 1000,
+	once: true,
 });
